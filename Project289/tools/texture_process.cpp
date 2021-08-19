@@ -37,17 +37,17 @@ Textures LoadMaterialTexures(ID3D11Device* device, aiMaterial* pMaterial, const 
 			switch (store_type) {
 			case TextureStorageType::EmbeddedIndexCompressed: {
 				int index = GetTextureIndex(&path);
-				materialTextures[tt].push_back(MaterialTexture(device, reinterpret_cast<uint8_t*>(pScene->mTextures[index]->pcData), pScene->mTextures[index]->mWidth, tt));
+				materialTextures[tt].push_back(MaterialTexture(device, reinterpret_cast<uint8_t*>(pScene->mTextures[index]->pcData), pScene->mTextures[index]->mWidth, tt, -1));
 			}
 			break;
 			case TextureStorageType::EmbeddedCompressed: {
 				const aiTexture* pTexture = pScene->GetEmbeddedTexture(path.C_Str());
-				materialTextures[tt].push_back(MaterialTexture(device, reinterpret_cast<uint8_t*>(pTexture->pcData), pTexture->mWidth, tt));
+				materialTextures[tt].push_back(MaterialTexture(device, reinterpret_cast<uint8_t*>(pTexture->pcData), pTexture->mWidth, tt, -1));
 			}
 			break;
 			case TextureStorageType::Disk: {
 				std::string fileName = path.C_Str();
-				materialTextures[tt].push_back(MaterialTexture(device, fileName, tt));
+				materialTextures[tt].push_back(MaterialTexture(device, fileName, tt, -1));
 			}
 			break;
 			}
@@ -55,7 +55,7 @@ Textures LoadMaterialTexures(ID3D11Device* device, aiMaterial* pMaterial, const 
 	}
 
 	if (materialTextures.size() == 0u) {
-		materialTextures.insert({ TextureType::DIFFUSE, { MaterialTexture(device, MaterialColors::UnhandeledTextureColor, TextureType::DIFFUSE) } });
+		materialTextures.insert({ TextureType::DIFFUSE, { MaterialTexture(device, MaterialColors::UnhandeledTextureColor, TextureType::DIFFUSE, 0) } });
 	}
 
 	return materialTextures;

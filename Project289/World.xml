@@ -2,7 +2,7 @@
 <World>
   <Actors>
 
-    <Actor name="memo1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+    <Actor name="human1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
       <TransformComponent>
         <Position x="0.000000" y="0.000000" z="0.000000" />
         <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
@@ -10,12 +10,199 @@
       </TransformComponent>
       <MeshRenderLightComponent>
         <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
-        <PixelShader>pixel_shader_light.cso</PixelShader>
-        <VertexShader>vertex_shader_light.cso</VertexShader>
+        <PixelShader>pixel_shader_light_nlswsp_inv_ny.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
         <Radius>auto</Radius>
       </MeshRenderLightComponent>
       <MeshComponent>
-        <Obj>data\objects\w1.obj</Obj>
+        <Obj>data\objects\human.obj</Obj>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="bed1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshRenderLightComponent>
+        <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+        <PixelShader>pixel_shader_light_nlswsp.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
+        <Radius>auto</Radius>
+      </MeshRenderLightComponent>
+      <MeshComponent>
+        <Obj>data\objects\bed.obj</Obj>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="pillow1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshRenderLightComponent>
+        <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+        <PixelShader>pixel_shader_light_nlswsp.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
+        <Radius>auto</Radius>
+      </MeshRenderLightComponent>
+      <MeshComponent>
+        <Obj>data\objects\pillow.obj</Obj>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="table1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshRenderLightComponent>
+        <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+        <PixelShader>pixel_shader_light_nlswsp_inv_ny.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
+        <Radius>auto</Radius>
+      </MeshRenderLightComponent>
+      <MeshComponent>
+        <Obj>data\objects\table1.obj</Obj>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="brain1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshRenderLightComponent>
+        <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+        <PixelShader>pixel_shader_light_nlswsp_inv_ny.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
+        <Radius>auto</Radius>
+      </MeshRenderLightComponent>
+      <MeshComponent>
+        <Obj>data\objects\brain.obj</Obj>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="table2" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshRenderLightComponent>
+        <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+        <PixelShader>pixel_shader_light_nlswsp_inv_ny.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
+        <Radius>auto</Radius>
+      </MeshRenderLightComponent>
+      <MeshComponent>
+        <Obj>data\objects\table2.obj</Obj>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="printer1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshRenderLightComponent>
+        <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+        <PixelShader>pixel_shader_light_nlswsp_inv_ny.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
+        <Radius>auto</Radius>
+      </MeshRenderLightComponent>
+      <MeshComponent>
+        <Obj>data\objects\printer.obj</Obj>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="scope1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshRenderLightComponent>
+        <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+        <PixelShader>pixel_shader_light_nlswsp_inv_ny.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
+        <Radius>auto</Radius>
+      </MeshRenderLightComponent>
+      <MeshComponent>
+        <Obj>data\objects\scope.obj</Obj>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="machine1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshRenderLightComponent>
+        <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+        <PixelShader>pixel_shader_light_nlswsp_inv_ny.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
+        <Radius>auto</Radius>
+      </MeshRenderLightComponent>
+      <MeshComponent>
+        <Obj>data\objects\machine.obj</Obj>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="wires1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshRenderLightComponent>
+        <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+        <PixelShader>pixel_shader_light_nlswsp_inv_ny.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
+        <Radius>auto</Radius>
+      </MeshRenderLightComponent>
+      <MeshComponent>
+        <Obj>data\objects\wires.obj</Obj>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="floor1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshRenderLightComponent>
+        <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+        <PixelShader>pixel_shader_light_nlswsp_inv_ny.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
+        <Radius>auto</Radius>
+      </MeshRenderLightComponent>
+      <MeshComponent>
+        <Obj>data\objects\floor.obj</Obj>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="hat1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshRenderLightComponent>
+        <Color r="0.500000" g="0.500000" b="0.500000" a="1.000000" />
+        <PixelShader>pixel_shader_light_nlswsp_inv_ny.cso</PixelShader>
+        <VertexShader>vertex_shader_light_nlswsp.cso</VertexShader>
+        <Radius>auto</Radius>
+      </MeshRenderLightComponent>
+      <MeshComponent>
+        <Obj>data\objects\hat.obj</Obj>
       </MeshComponent>
     </Actor>
 

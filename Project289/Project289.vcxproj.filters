@@ -34,9 +34,6 @@
     <Filter Include="Resource Files\models">
       <UniqueIdentifier>{42b0a96c-408d-4bd2-ab27-000ce3ccbaac}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\samples">
-      <UniqueIdentifier>{9983b813-8133-4fa3-b624-0b85a276976e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files\shaders">
       <UniqueIdentifier>{755c62dd-5904-42d4-9ffd-abdbed570a05}</UniqueIdentifier>
     </Filter>
@@ -1336,57 +1333,21 @@
     <FxCompile Include="data\shaders\pixel_shader_basic_clip.hlsl">
       <Filter>Resource Files\shaders</Filter>
     </FxCompile>
+    <FxCompile Include="data\shaders\vertex_shader_light_nlswsp.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\pixel_shader_light_nlswsp.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="data\shaders\pixel_shader_light_nlswsp_inv_ny.hlsl">
+      <Filter>Resource Files\shaders</Filter>
+    </FxCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="data\objects\nanosuit\arm_dif.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
     <None Include="data\objects\nanosuit\arm_showroom_ddn.png">
       <Filter>Resource Files\textures</Filter>
     </None>
     <None Include="data\objects\nanosuit\arm_showroom_spec.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\body_dif.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\body_showroom_ddn.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\body_showroom_spec.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\glass_ddn.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\glass_dif.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\hand_dif.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\hand_showroom_ddn.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\hand_showroom_spec.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\helmet_diff.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\helmet_showroom_ddn.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\helmet_showroom_spec.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\leg_dif.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\leg_showroom_ddn.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\leg_showroom_spec.png">
       <Filter>Resource Files\textures</Filter>
     </None>
     <None Include="data\textures\pinksquare.jpg">
@@ -1421,39 +1382,6 @@
     </None>
     <None Include="data\fonts\comic_sans_ms_16.sprite">
       <Filter>Resource Files\fonts</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\nanosuit.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\nanosuit\nanosuit.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\samples\blue_cube_notexture.fbx">
-      <Filter>Resource Files\samples</Filter>
-    </None>
-    <None Include="data\samples\orange_disktexture.fbx">
-      <Filter>Resource Files\samples</Filter>
-    </None>
-    <None Include="data\samples\orange_embeddedtexture.fbx">
-      <Filter>Resource Files\samples</Filter>
-    </None>
-    <None Include="data\samples\person_embeddedindexed.blend">
-      <Filter>Resource Files\samples</Filter>
-    </None>
-    <None Include="data\samples\Credits.txt">
-      <Filter>Resource Files\samples</Filter>
-    </None>
-    <None Include="data\samples\Color.jpg">
-      <Filter>Resource Files\samples</Filter>
-    </None>
-    <None Include="data\samples\Normal.jpg">
-      <Filter>Resource Files\samples</Filter>
-    </None>
-    <None Include="data\samples\dodge_challenger.fbx">
-      <Filter>Resource Files\samples</Filter>
-    </None>
-    <None Include="data\light.fbx">
-      <Filter>Resource Files\samples</Filter>
     </None>
     <None Include="data\actors\MeshRenderComponent.xml">
       <Filter>Resource Files\actors</Filter>
@@ -1581,15 +1509,6 @@
     <None Include="data\actors\ForceGeneratorComponent.xml">
       <Filter>Resource Files\actors</Filter>
     </None>
-    <None Include="data\textures\aletter.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\aletter.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\aletter.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
     <None Include="data\textures\fireatlas.jpg">
       <Filter>Resource Files\textures</Filter>
     </None>
@@ -1653,87 +1572,6 @@
     <None Include="data\textures\logo4.jpg">
       <Filter>Resource Files\textures</Filter>
     </None>
-    <None Include="data\objects\rose.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\rose.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\textures\RoseLPoly_Material.015_BaseColor.jpg">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\textures\Character.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\sound\In_the_world_of_your_dreams_2.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\In_the_world_of_your_dreams_1.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\far_far_away_2.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\far_far_away_1_2.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\far_far_away_1.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb11.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb12.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb13.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb21.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb22.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb23.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb31.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb32.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb33.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb41.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb42.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb43.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb51.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb52.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb53.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb61.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\sb62.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
-    <None Include="data\sound\space_ambient122.mp3">
-      <Filter>Resource Files\sound</Filter>
-    </None>
     <None Include="data\objects\rock2.obj">
       <Filter>Resource Files\models</Filter>
     </None>
@@ -1770,24 +1608,6 @@
     <None Include="data\textures\rock2_None_BaseColor.png">
       <Filter>Resource Files\textures</Filter>
     </None>
-    <None Include="data\objects\empty_heart.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\full_heart.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\empty_heart.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\full_heart.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\textures\full_heart.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\textures\empty_heart.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
     <None Include="data\textures\10.dds">
       <Filter>Resource Files\textures</Filter>
     </None>
@@ -1800,9 +1620,6 @@
     <None Include="data\textures\loading2.jpg">
       <Filter>Resource Files\textures</Filter>
     </None>
-    <None Include="data\textures\losing .jpg">
-      <Filter>Resource Files\textures</Filter>
-    </None>
     <None Include="data\textures\Plants1_Material.001_BaseColor.jpg">
       <Filter>Resource Files\textures</Filter>
     </None>
@@ -1812,53 +1629,11 @@
     <None Include="data\textures\Plants1_Material.001_OcclusionRoughnessMetallic.jpg">
       <Filter>Resource Files\textures</Filter>
     </None>
-    <None Include="data\textures\win.jpg">
-      <Filter>Resource Files\textures</Filter>
-    </None>
     <None Include="data\objects\Plants1_decimate02.mtl">
       <Filter>Resource Files\models</Filter>
     </None>
     <None Include="data\objects\Plants1_decimate02.obj">
       <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\textures\note.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\textures\danger.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\danger.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\danger.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\win.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\win.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\note.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\note.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\losing.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\losing.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\textures\crystal_None_OcclusionRoughnessMetallic.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\textures\crystal_None_Normal.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\textures\crystal_None_BaseColor.png">
-      <Filter>Resource Files\textures</Filter>
     </None>
     <None Include="data\textures\mushroom_None_OcclusionRoughnessMetallic.png">
       <Filter>Resource Files\textures</Filter>
@@ -1869,20 +1644,11 @@
     <None Include="data\textures\mushroom_None_BaseColor.png">
       <Filter>Resource Files\textures</Filter>
     </None>
-    <None Include="data\objects\crystal.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\crystal.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
     <None Include="data\objects\mushroom.mtl">
       <Filter>Resource Files\models</Filter>
     </None>
     <None Include="data\objects\mushroom.obj">
       <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\sound\space_ambient122_2.mp3">
-      <Filter>Resource Files\sound</Filter>
     </None>
     <None Include="data\textures\11.dds">
       <Filter>Resource Files\textures</Filter>
@@ -1908,39 +1674,6 @@
     <None Include="data\fonts\mefont.spritefont">
       <Filter>Resource Files\fonts</Filter>
     </None>
-    <None Include="data\objects\drop.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\drop.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\textures\drop_None_OcclusionRoughnessMetallic.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\textures\drop_None_Normal.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\textures\drop_None_BaseColor.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\textures\drop.png">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\objects\Beetle1.obj">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\objects\Beetle1.mtl">
-      <Filter>Resource Files\models</Filter>
-    </None>
-    <None Include="data\textures\Beetle_Material.001_OcclusionRoughnessMetallic.jpg">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\textures\Beetle_Material.001_Normal.jpg">
-      <Filter>Resource Files\textures</Filter>
-    </None>
-    <None Include="data\textures\Beetle_Material.001_BaseColor.jpg">
-      <Filter>Resource Files\textures</Filter>
-    </None>
     <None Include="data\textures\female_skin_spec_4k.png">
       <Filter>Resource Files\textures</Filter>
     </None>
@@ -1959,16 +1692,268 @@
     <None Include="data\textures\.HG_Eye_Color.png">
       <Filter>Resource Files\textures</Filter>
     </None>
-    <None Include="data\objects\w1.obj">
+    <None Include="data\textures\1.TABLE_lambert13_AO.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\1.TABLE_lambert13_BaseColor.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\1.TABLE_lambert13_Roughness.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\1_Albedo.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\1_Normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\1_Specular.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\2.TABLE_lambert5_AO.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\2.TABLE_lambert5_BaseColor.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\2.TABLE_lambert5_Roughness.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\2_Albedo.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\2_Normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\2_Specular.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\3.TABLE_lambert6_AO.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\3.TABLE_lambert6_BaseColor.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\3.TABLE_lambert6_Roughness.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\3_Albedo.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\3_Normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\3_Specular.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\5_Albedo.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\5_Normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\5_Specular.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\6_Albedo.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\6_Normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\6_Specular.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\army_bed_Base_Color.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\army_bed_Mixed_AO.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\army_bed_Normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\Ebony dark Wood.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\futuristic-panels1-albedo.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\futuristic-panels1-ao.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\futuristic-panels1-normal-ogl.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\Machine2o_DefaultMaterial_BaseColor.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\Machine2o_DefaultMaterial_Metallic.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\Machine2o_DefaultMaterial_Normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\Machine2o_DefaultMaterial_Roughness.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\masasmotmod_lambert5_Metallic.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\masasmotmod_lambert5_Normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\masasmotmod_lambert6_Metallic.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\masasmotmod_lambert6_Normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\old-plank-flooring2b_AO.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\old-plank-flooring2b_basecolor.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\old-plank-flooring2b_normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\scuffed-plastic2-alb.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\scuffed-plastic5-alb.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\scuffed-plastic-ao.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\scuffed-plastic-normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\synth-rubber-albedo.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\synth-rubber-normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\synth-rubber-roughness.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\Untitled1_Albedo.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\Untitled1_Metalness.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\Untitled1_Normal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\Untitled1_Roughness.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\Untitled1_Specular.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\191.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="World6.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data\textures\scuffed-plastic-metal.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\army_bed_Normal_DirectX.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\6_Roughness.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\synth-rubber-metalness.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\old-plank-flooring2b_metalness.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\textures\army_bed_Metallic.png">
+      <Filter>Resource Files\textures</Filter>
+    </None>
+    <None Include="data\objects\bed.mtl">
       <Filter>Resource Files\models</Filter>
     </None>
-    <None Include="data\objects\w1.mtl">
+    <None Include="data\objects\bed.obj">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\brain.mtl">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\brain.obj">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\floor.mtl">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\floor.obj">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\hat.mtl">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\hat.obj">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\human.mtl">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\human.obj">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\machine.mtl">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\machine.obj">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\pillow.mtl">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\pillow.obj">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\printer.mtl">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\printer.obj">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\scope.mtl">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\scope.obj">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\table1.mtl">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\table1.obj">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\table2.mtl">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\table2.obj">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\wires.mtl">
+      <Filter>Resource Files\models</Filter>
+    </None>
+    <None Include="data\objects\wires.obj">
       <Filter>Resource Files\models</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="World6.xml">
-      <Filter>Resource Files</Filter>
-    </Xml>
+    <Media Include="data\sound\Insania-Pax-Punctio.mp3">
+      <Filter>Resource Files\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>

@@ -1,0 +1,84 @@
+﻿# Blender MTL File: 'None'
+# Material Count: 6
+
+newmtl 1
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump data\textures\1_Normal.png
+map_Kd data\textures\1_Albedo.png
+map_Ks data\textures\1_Specular.png
+
+newmtl 2
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump data\textures\2_Normal.png
+map_Kd data\textures\2_Albedo.png
+map_Ks data\textures\2_Specular.png
+
+newmtl 3
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump data\textures\3_Normal.png
+map_Kd data\textures\3_Albedo.png
+map_Ks data\textures\3_Specular.png
+
+newmtl 5
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump data\textures\5_Normal.png
+map_Kd data\textures\5_Albedo.png
+map_Ks data\textures\5_Specular.png
+
+newmtl Material.006
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump data\textures\6_Normal.png
+map_Kd data\textures\6_Albedo.png
+map_Ks data\textures\6_Specular.png
+map_Ns data\textures\6_Roughness.png
+refl data\textures\6_Metalness.png
+
+newmtl untitled1
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump data\textures\Untitled1_Normal.png
+map_Kd data\textures\Untitled1_Albedo.png
+map_Ks data\textures\Untitled1_Specular.png
+map_Ns data\textures\Untitled1_Roughness.png
+refl data\textures\Untitled1_Metalness.png

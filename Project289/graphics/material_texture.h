@@ -52,11 +52,11 @@ using ResourcePair = std::pair<Microsoft::WRL::ComPtr<ID3D11Resource>, Microsoft
 class MaterialTexture {
 public:
 	MaterialTexture();
-	MaterialTexture(ID3D11Device* device, const std::string& fileName);
-	MaterialTexture(ID3D11Device* device, const MaterialColor& color, TextureType type);
-	MaterialTexture(ID3D11Device* device, const MaterialColor* color_data, UINT width, UINT height, TextureType type);
-	MaterialTexture(ID3D11Device* device, const std::string& fileName, TextureType type);
-	MaterialTexture(ID3D11Device* device, const uint8_t* pData, size_t size, TextureType type);
+	MaterialTexture(ID3D11Device* device, const std::string& fileName, int mip_levels);
+	MaterialTexture(ID3D11Device* device, const MaterialColor& color, TextureType type, int mip_levels);
+	MaterialTexture(ID3D11Device* device, const MaterialColor* color_data, UINT width, UINT height, TextureType type, int mip_levels);
+	MaterialTexture(ID3D11Device* device, const std::string& fileName, TextureType type, int mip_levels);
+	MaterialTexture(ID3D11Device* device, const uint8_t* pData, size_t size, TextureType type, int mip_levels);
 
 	MaterialTexture(const MaterialTexture& other);
 	MaterialTexture(MaterialTexture&& other);
@@ -67,8 +67,8 @@ public:
 	ID3D11ShaderResourceView* const* GetTextureResourceViewAddress() const;
 
 private:
-	void InitializeColorMaterial(ID3D11Device* device, const MaterialColor& color, TextureType type);
-	void InitializeTextureMaterial(ID3D11Device* device, const MaterialColor* color_data, UINT width, UINT height, TextureType type);
+	void InitializeColorMaterial(ID3D11Device* device, const MaterialColor& color, TextureType type, int mip_levels);
+	void InitializeTextureMaterial(ID3D11Device* device, const MaterialColor* color_data, UINT width, UINT height, TextureType type, int mip_levels);
 
 	Microsoft::WRL::ComPtr<ID3D11Resource> m_texture;
 	Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> m_texture_view;

@@ -15,6 +15,11 @@
 D3D11LightPipeline::D3D11LightPipeline(int mesh_id, MeshRenderLightComponent& data, const DirectX::XMFLOAT4X4* pMatrix) : D3D11LightPipeline(mesh_id, data, DirectX::XMLoadFloat4x4(pMatrix), DirectX::XMMatrixIdentity(), true) {}
 
 D3D11LightPipeline::D3D11LightPipeline(int mesh_id, MeshRenderLightComponent& data, DirectX::FXMMATRIX to, DirectX::CXMMATRIX from, bool calulate_from) : SceneNode(nullptr, RenderPass::RenderPass_Actor, to, from, calulate_from) {
+	m_is_diffuse = false;
+	m_is_normal = false;
+	m_is_shadow = false;
+	m_is_specular = false;
+
 	m_mesh_id = mesh_id;
 
 	D3DRenderer11* renderer = static_cast<D3DRenderer11*>(g_pApp->GetRenderer());
@@ -78,20 +83,38 @@ D3D11LightPipeline::D3D11LightPipeline(int mesh_id, MeshRenderLightComponent& da
 	m_pPixelShader = m_ps->GetShader();
 	m_pPSBytecodeBlob = m_ps->GetBuffer();
 
+	m_is_diffuse = true;
 	m_diffuse_srv_start_slot = 0;
 	m_diffuse_srv0 = mesh.GetFirstTexture(TextureType::DIFFUSE).GetTextureResourceViewAddress();
 
+	/*D3D11_SHADER_RESOURCE_VIEW_DESC texDesc;
+	(*m_diffuse_srv0)->GetDesc(&texDesc);
+	texDesc.BindFlags = D3D11_BIND_SHADER_RESOURCE | D3D11_BIND_RENDER_TARGET;
+	texDesc.CPUAccessFlags = 0;
+	texDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+	texDesc.MipLevels = 7;
+	texDesc.MiscFlags = D3D11_RESOURCE_MISC_GENERATE_MIPS;
+	texDesc.Usage = D3D11_USAGE_DEFAULT;*/
+
 	m_normal_srv_start_slot = 1;
 	if (mesh.CountTextures(TextureType::NORMALS)) {
+		m_is_normal = true;
 		m_normal_srv1 = mesh.GetFirstTexture(TextureType::NORMALS).GetTextureResourceViewAddress();
 	}
 	else if (mesh.CountTextures(TextureType::HEIGHT)) {
+		m_is_normal = true;
 		m_normal_srv1 = mesh.GetFirstTexture(TextureType::HEIGHT).GetTextureResourceViewAddress();
 	}
 
+	m_is_shadow = true;
 	m_shadow_srv_start_slot = 2;
-
 	m_pVSInputLayout = m_vs->GetInputLayout();
+
+	if (mesh.CountTextures(TextureType::SPECULAR)) {
+		m_is_specular = true;
+		m_specular_srv_start_slot = 3;
+		m_specular_srv3 = mesh.GetFirstTexture(TextureType::SPECULAR).GetTextureResourceViewAddress();
+	}
 
 	m_primitive_topology_type = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
 
@@ -147,6 +170,24 @@ D3D11LightPipeline::D3D11LightPipeline(int mesh_id, MeshRenderLightComponent& da
 	samplerDesc2.MaxLOD = D3D11_FLOAT32_MAX;
 
 	hr = device->CreateSamplerState(&samplerDesc2, &m_sampleState2);
+	COM_ERROR_IF_FAILED(hr, "Failed to create sampler state");
+
+	D3D11_SAMPLER_DESC samplerDesc3;
+	samplerDesc3.Filter = D3D11_FILTER_ANISOTROPIC;
+	samplerDesc3.AddressU = D3D11_TEXTURE_ADDRESS_WRAP;
+	samplerDesc3.AddressV = D3D11_TEXTURE_ADDRESS_WRAP;
+	samplerDesc3.AddressW = D3D11_TEXTURE_ADDRESS_WRAP;
+	samplerDesc3.MipLODBias = 0.0f;
+	samplerDesc3.MaxAnisotropy = 4;
+	samplerDesc3.ComparisonFunc = D3D11_COMPARISON_ALWAYS;
+	samplerDesc3.BorderColor[0] = 0;
+	samplerDesc3.BorderColor[1] = 0;
+	samplerDesc3.BorderColor[2] = 0;
+	samplerDesc3.BorderColor[3] = 0;
+	samplerDesc3.MinLOD = 0;
+	samplerDesc3.MaxLOD = D3D11_FLOAT32_MAX;
+
+	hr = device->CreateSamplerState(&samplerDesc3, &m_sampleState3);
 	COM_ERROR_IF_FAILED(hr, "Failed to create sampler state");
 
 	D3D11_DEPTH_STENCIL_DESC depthStencilDesc;
@@ -259,8 +300,9 @@ HRESULT D3D11LightPipeline::VRender(Scene* pScene) {
 	deviceContext->VSSetShader(m_pVertexShader, nullptr, 0u);
 	deviceContext->PSSetShader(m_pPixelShader, nullptr, 0u);
 	deviceContext->PSSetShaderResources(m_diffuse_srv_start_slot, 1, m_diffuse_srv0);
-	deviceContext->PSSetShaderResources(m_normal_srv_start_slot, 1, m_normal_srv1);
+	if (m_is_normal) { deviceContext->PSSetShaderResources(m_normal_srv_start_slot, 1, m_normal_srv1); }
 	deviceContext->PSSetShaderResources(m_shadow_srv_start_slot, 1, m_shadow_srv2);
+	if (m_is_specular) { deviceContext->PSSetShaderResources(m_specular_srv_start_slot, 1, m_specular_srv3); }
 	deviceContext->IASetInputLayout(m_pVSInputLayout);
 	deviceContext->IASetPrimitiveTopology(m_primitive_topology_type);
 	deviceContext->PSSetSamplers(0, 1, m_sampleState0.GetAddressOf());

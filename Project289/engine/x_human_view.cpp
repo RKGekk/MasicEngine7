@@ -66,7 +66,7 @@ void XHumanView::VSetControlledActor(ActorId actorId) {
 		m_keyboard_handlers.clear();
 		m_pointer_handlers.clear();
 		m_pGeoPhysicsMovementController.reset();
-		m_pFreeCameraController.reset(new MovementController(m_camera, 0, 0, true));
+		m_pFreeCameraController.reset(new MovementController(m_camera, 0, 0, false, true));
 		m_keyboard_handlers.push_back(m_pFreeCameraController);
 		m_pointer_handlers.push_back(m_pFreeCameraController);
 
@@ -92,7 +92,7 @@ bool XHumanView::VLoadGameDelegate(TiXmlElement* pLevelData) {
 
 	m_keyboard_handlers.clear();
 	m_pointer_handlers.clear();
-	m_pFreeCameraController.reset(new MovementController(m_camera, 0, 0, true));
+	m_pFreeCameraController.reset(new MovementController(m_camera, 0, 0, false, true));
 	m_keyboard_handlers.push_back(m_pFreeCameraController);
 	m_pointer_handlers.push_back(m_pFreeCameraController);
 

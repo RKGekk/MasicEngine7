@@ -68,7 +68,7 @@ D3D11GeometryPipeline::D3D11GeometryPipeline(SmokeComponent& data, DirectX::FXMM
 	m_pPixelShader = m_ps->GetShader();
 	m_pPSBytecodeBlob = m_ps->GetBuffer();
 
-	m_texture = MaterialTexture(device, data.GetTexture());
+	m_texture = MaterialTexture(device, data.GetTexture(), -1);
 	m_srv_start_slot = 0;
 	m_srv0 = m_texture.GetTextureResourceView();
 

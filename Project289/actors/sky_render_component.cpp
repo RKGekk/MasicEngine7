@@ -87,7 +87,7 @@ std::shared_ptr<SceneNode> SkyRenderComponent::VCreateSceneNode() {
 
 	GeometryGenerator geoGen;
 	geoGen.CreateSphere(m_sky_sphere_radius, m_sky_sphere_slice_count, m_sky_sphere_stack_count, m_mesh);
-	m_mesh.AddTexture(TextureType::BASE_COLOR, { renderer->GetDevice(), m_sky_cube_map_path, TextureType::BASE_COLOR });
+	m_mesh.AddTexture(TextureType::BASE_COLOR, { renderer->GetDevice(), m_sky_cube_map_path, TextureType::BASE_COLOR, 0 });
 
 	std::shared_ptr<D3D11SkyPipeline> result = std::make_shared<D3D11SkyPipeline>(*this, DirectX::XMMatrixIdentity(), DirectX::XMMatrixIdentity(), false);
 	result->SetAlpha(GetColor().w);

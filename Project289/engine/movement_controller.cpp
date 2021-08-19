@@ -3,7 +3,7 @@
 #include "../actors/transform_component.h"
 #include "human_view.h"
 
-MovementController::MovementController(std::shared_ptr<SceneNode> object, float initialYaw, float initialPitch, bool rotateWhenLButtonDown) : m_object(object) {
+MovementController::MovementController(std::shared_ptr<SceneNode> object, float initialYaw, float initialPitch, bool rotateWhenLButtonDown, bool rotateWhenRButtonDown) : m_object(object) {
 	m_matToWorld = m_object->VGet().ToWorld4x4();
 	m_matFromWorld = m_object->VGet().FromWorld4x4();
 
@@ -29,6 +29,9 @@ MovementController::MovementController(std::shared_ptr<SceneNode> object, float 
 
 	m_mouseLButtonDown = false;
 	m_bRotateWhenLButtonDown = rotateWhenLButtonDown;
+
+	m_mouseRButtonDown = false;
+	m_bRotateWhenRButtonDown = rotateWhenRButtonDown;
 }
 
 void MovementController::SetObject(std::shared_ptr<SceneNode> newObject) {
@@ -147,6 +150,14 @@ bool MovementController::VOnPointerMove(int x, int y, const int radius) {
 			m_lastMousePos_y = y;
 		}
 	}
+	else if (m_bRotateWhenRButtonDown) {
+		if ((m_lastMousePos_x != x || m_lastMousePos_y != y) && m_mouseRButtonDown) {
+			m_fTargetYaw = m_fTargetYaw + (m_lastMousePos_x - x);
+			m_fTargetPitch = m_fTargetPitch + (y - m_lastMousePos_y);
+			m_lastMousePos_x = x;
+			m_lastMousePos_y = y;
+		}
+	}
 	else if (m_lastMousePos_x != x || m_lastMousePos_y != y) {
 		m_fTargetYaw = m_fTargetYaw + (m_lastMousePos_x - x);
 		m_fTargetPitch = m_fTargetPitch + (y - m_lastMousePos_y);
@@ -164,12 +175,22 @@ bool MovementController::VOnPointerButtonDown(int x, int y, const int radius, co
 		m_lastMousePos_y = y;
 		return true;
 	}
+	if (buttonName == "PointerRight") {
+		m_mouseRButtonDown = true;
+		m_lastMousePos_x = x;
+		m_lastMousePos_y = y;
+		return true;
+	}
 	return false;
 }
 
 bool MovementController::VOnPointerButtonUp(int x, int y, const int radius, const std::string& buttonName) {
 	if (buttonName == "PointerLeft") {
 		m_mouseLButtonDown = false;
+		return true;
+	}
+	if (buttonName == "PointerRight") {
+		m_mouseRButtonDown = false;
 		return true;
 	}
 	return false;

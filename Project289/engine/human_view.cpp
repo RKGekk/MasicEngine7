@@ -146,6 +146,7 @@ LRESULT HumanView::VOnMsgProc(HWND m_hWnd, UINT m_uMsg, WPARAM m_wParam, LPARAM 
 			}
 		}
 		break;
+		break;
 		case WM_CHAR: {}
 		break;
 	}

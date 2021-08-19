@@ -50,12 +50,19 @@ protected:
 
 	ID3D11ShaderResourceView* const* m_diffuse_srv0;
 	unsigned int m_diffuse_srv_start_slot;
+	bool m_is_diffuse;
 
 	ID3D11ShaderResourceView* const* m_normal_srv1;
 	unsigned int m_normal_srv_start_slot;
+	bool m_is_normal;
 
 	ID3D11ShaderResourceView* const* m_shadow_srv2;
 	unsigned int m_shadow_srv_start_slot;
+	bool m_is_shadow;
+
+	ID3D11ShaderResourceView* const* m_specular_srv3;
+	unsigned int m_specular_srv_start_slot;
+	bool m_is_specular;
 
 	ID3D11InputLayout* m_pVSInputLayout;
 	D3D11_PRIMITIVE_TOPOLOGY m_primitive_topology_type;
@@ -63,6 +70,8 @@ protected:
 	Microsoft::WRL::ComPtr<ID3D11SamplerState> m_sampleState0;
 	Microsoft::WRL::ComPtr<ID3D11SamplerState> m_sampleState1;
 	Microsoft::WRL::ComPtr<ID3D11SamplerState> m_sampleState2;
+	Microsoft::WRL::ComPtr<ID3D11SamplerState> m_sampleState3;
+
 	Microsoft::WRL::ComPtr<ID3D11DepthStencilState>	m_depthStencilState;
 	Microsoft::WRL::ComPtr<ID3D11RasterizerState> m_rasterState;
 	Microsoft::WRL::ComPtr<ID3D11BlendState> m_blendState;

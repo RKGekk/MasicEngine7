@@ -1,0 +1,41 @@
+# Blender MTL File: 'None'
+# Material Count: 3
+
+newmtl descapmapler:aiStandardSurface1SG
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump data\textures\masasmotmod_lambert5_Normal.png
+map_Kd data\textures\1.TABLE_lambert13_BaseColor.png
+map_Ks data\textures\1.TABLE_lambert13_AO.png
+
+newmtl descapmapler:aiStandardSurface2SG
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump data\textures\masasmotmod_lambert5_Normal.png
+map_Kd data\textures\2.TABLE_lambert5_BaseColor.png
+map_Ks data\textures\2.TABLE_lambert5_AO.png
+
+newmtl descapmapler:aiStandardSurface3SG
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump data\textures\masasmotmod_lambert6_Normal.png
+map_Kd data\textures\3.TABLE_lambert6_BaseColor.png
+map_Ks data\textures\3.TABLE_lambert6_AO.png

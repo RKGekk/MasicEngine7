@@ -31,10 +31,13 @@ protected:
 	bool m_mouseLButtonDown;
 	bool m_bRotateWhenLButtonDown;
 
+	bool m_mouseRButtonDown;
+	bool m_bRotateWhenRButtonDown;
+
 	std::shared_ptr<SceneNode> m_object;
 
 public:
-	MovementController(std::shared_ptr<SceneNode> object, float initialYaw, float initialPitch, bool rotateWhenLButtonDown);
+	MovementController(std::shared_ptr<SceneNode> object, float initialYaw, float initialPitch, bool rotateWhenLButtonDown, bool rotateWhenRButtonDown);
 	void SetObject(std::shared_ptr<SceneNode> newObject);
 
 	void OnUpdate(float elapsed_seconds);
