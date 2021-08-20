@@ -6,7 +6,7 @@
     <Height>720</Height>
     <RunFullSpeed>no</RunFullSpeed>
     <FullScreen>no</FullScreen>
-    <DebugUI>true</DebugUI>
+    <DebugUI>false</DebugUI>
   </Graphics>
   <Camera>
     <ScreenFar>10</ScreenFar>
@@ -18,9 +18,9 @@
     <GameCameraRotateX>22.5</GameCameraRotateX>
   </Camera>
   <Fog>
-    <FogStart>1.953</FogStart>
-    <FogRange>4.444</FogRange>
-    <FogColor r="0.374000" g="0.000000" b="0.794000" a="1.000000"/>;
+    <FogStart>2.349</FogStart>
+    <FogRange>3.049</FogRange>
+    <FogColor r="0.000000" g="0.000000" b="0.000000" a="1.000000"/>;
   </Fog>
   <Sound sfxVolume="50" musicVolume="25"/>
 </PlayerOptions>

@@ -13,8 +13,8 @@ XHumanView::XHumanView(IRenderer* renderer) : HumanView(renderer) {
 		m_ActorMenuUI = std::make_shared<ActorMenuUI>(m_process_manager.get());
 		VPushElement(m_ActorMenuUI);
 	}
-	m_StandardHUD = std::make_shared<StandardHUD>(m_process_manager.get());
-	VPushElement(m_StandardHUD);
+	//m_StandardHUD = std::make_shared<StandardHUD>(m_process_manager.get());
+	//VPushElement(m_StandardHUD);
 	RegisterAllDelegates();
 }
 
@@ -66,9 +66,9 @@ void XHumanView::VSetControlledActor(ActorId actorId) {
 		m_keyboard_handlers.clear();
 		m_pointer_handlers.clear();
 		m_pGeoPhysicsMovementController.reset();
-		m_pFreeCameraController.reset(new MovementController(m_camera, 0, 0, false, true));
-		m_keyboard_handlers.push_back(m_pFreeCameraController);
-		m_pointer_handlers.push_back(m_pFreeCameraController);
+		//m_pFreeCameraController.reset(new MovementController(m_camera, 0, 0, false, true));
+		//m_keyboard_handlers.push_back(m_pFreeCameraController);
+		//m_pointer_handlers.push_back(m_pFreeCameraController);
 
 		m_camera->SetTarget(nullptr);
 		return;
@@ -92,9 +92,9 @@ bool XHumanView::VLoadGameDelegate(TiXmlElement* pLevelData) {
 
 	m_keyboard_handlers.clear();
 	m_pointer_handlers.clear();
-	m_pFreeCameraController.reset(new MovementController(m_camera, 0, 0, false, true));
-	m_keyboard_handlers.push_back(m_pFreeCameraController);
-	m_pointer_handlers.push_back(m_pFreeCameraController);
+	//m_pFreeCameraController.reset(new MovementController(m_camera, 0, 0, false, true));
+	//m_keyboard_handlers.push_back(m_pFreeCameraController);
+	//m_pointer_handlers.push_back(m_pFreeCameraController);
 
 	m_scene->VOnRestore();
 	return true;

@@ -67,7 +67,6 @@ void XLogic::VChangeState(BaseEngineState newState) {
 				std::shared_ptr<HumanView> gameView(new XHumanView(g_pApp->GetRenderer()));
 				g_pApp->GetGameLogic()->VLoadGame("World.xml", gameView);
 				gameView->VCanDraw(false);
-
 				g_pApp->GetGameLogic()->VAddView(gameView);
 				return true;
 			});
@@ -75,6 +74,14 @@ void XLogic::VChangeState(BaseEngineState newState) {
 				g_pApp->GetTimer().Reset();
 				std::shared_ptr<EvtData_Environment_Loaded> pEvent(new EvtData_Environment_Loaded());
 				IEventManager::Get()->VTriggerEvent(pEvent);
+
+				LPCWSTR a = L"open data/sound/Insania-Pax-Punctio.mp3 type mpegvideo";
+				int error = 99;
+				error = mciSendString(a, NULL, 0, 0);
+				int error2;
+				LPCWSTR b = L"play data/sound/Insania-Pax-Punctio.mp3";
+				error2 = mciSendString(b, NULL, 0, 0);
+
 				return true;
 			});
 			execOne->AttachChild(delay);
@@ -124,6 +131,21 @@ void XLogic::EnvironmentLoadedDelegate(IEventDataPtr pEventData) {
 		levelView->VCanDraw(true);
 
 		g_pApp->GetGameLogic()->VRemoveView(menuView);
+
+		DirectX::XMMATRIX trans = DirectX::XMMatrixTranslation(0.0f, 1.0f, -3.0f);
+		levelView->VGetCamera()->VSetTransform(trans, DirectX::XMMatrixIdentity(), true);
+
+		std::shared_ptr<DelayProcess> execCam1 = std::make_shared<DelayProcess>(30.0f, [](float dt, float tt, float n) {
+			DirectX::XMMATRIX trans = DirectX::XMMatrixTranslation(tt * 0.125f, 1.0f, -2.0f);
+			g_pApp->GetHumanView()->VGetCamera()->VSetTransform(trans, DirectX::XMMatrixIdentity(), true);
+			return true;
+		});
+		std::shared_ptr<ExecProcess> execCam2 = std::make_shared<ExecProcess>([]() {
+			g_pApp->AbortGame();
+			return true;
+		});
+		execCam1->AttachChild(execCam2);
+		g_pApp->GetGameLogic()->AttachProcess(execCam1);
 
 		/*StrongActorPtr pActorTeapot = MakeStrongPtr(g_pApp->GetGameLogic()->VGetActorByName("pers"));
 		levelView->VSetControlledActor(pActorTeapot->GetId());*/
